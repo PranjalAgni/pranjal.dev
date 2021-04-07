@@ -35,5 +35,23 @@ module.exports = {
     },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-styled-components`,
+    // SOURCE FILE SYSTEM -
+    // SOURCE JSON
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/json`,
+      },
+    },
+    // MARKDOWN
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "case-studies",
+        path: `${__dirname}/content/case-studies`,
+      },
+    },
   ],
 };

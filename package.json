@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "pranjal.dev",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "🌻 This is my personal portfolio, powered by Gatsby here you can find my all side projects ,experiments and socials link",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
@@ -20,6 +20,8 @@
     "gatsby-plugin-sharp": "^3.2.0",
     "gatsby-plugin-styled-components": "^4.2.0",
     "gatsby-source-filesystem": "^3.2.0",
+    "gatsby-transformer-json": "^3.2.0",
+    "gatsby-transformer-remark": "^3.2.0",
     "gatsby-transformer-sharp": "^3.2.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
@@ -27,13 +29,17 @@
     "react-dom": "^17.0.1",
     "react-grid-system": "^7.1.2",
     "react-helmet": "^6.1.0",
+    "react-intersection-observer": "^8.31.0",
     "react-scroll": "^1.8.2",
     "react-scroll-parallax": "^2.3.5",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.0",
     "@types/react-scroll": "^1.8.2",
+    "@types/react-slick": "^0.23.4",
     "@types/styled-components": "^5.1.9",
     "prettier": "2.2.1"
   },

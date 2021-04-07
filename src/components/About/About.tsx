@@ -24,15 +24,12 @@ const About = () => {
           <a className="about__link" href="https://www.highradius.com/">
             Highradius
           </a>{" "}
-          as a FullStack engineer. I tend to make use of modern web technologies
-          to build websites that look great, feel fantastic, and function
-          correctly. I am especially focusing on Reactjs.
+          as a FullStack engineer. I love to experiment and learn new things. I
+          love backend development, and read about design patterns
           <br />
           <br />
-          I'm also a certified graphic designer from "Ramakrishna Mission
-          Shilpamandira". I also do Graphic and UI designing. Since I love both
-          programming and designing, I'm also interested in creating
-          programmatic designs and creative coding projects.
+          I'm also into opensource, you can follow me on Github, to get updates
+          on my new projects
         </p>
       </AboutInfo>
 
