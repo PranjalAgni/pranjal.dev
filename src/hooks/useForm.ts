@@ -7,12 +7,14 @@ const useForm = () => {
     message: "",
   });
   const [errors, setErrors] = useState({
-    email: null,
-    name: null,
-    message: null,
+    _replyto: "",
+    name: "",
+    message: "",
   });
 
-  const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleInput = (
+    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
+  ) => {
     e.preventDefault();
     const { value, name } = e.target;
     console.log({ value, name });
