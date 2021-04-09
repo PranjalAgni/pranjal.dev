@@ -1,4 +1,5 @@
 const path = require("path");
+const axios = require("axios");
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -13,5 +14,43 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@config": path.join(__dirname, "src/config"),
       },
     },
+  });
+};
+
+exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
+  const { createNode } = actions;
+
+  const createPinnedRepo = (repo, idx) => {
+    const node = {
+      id: createNodeId(`pinned-repo-${idx}`),
+      parent: null,
+      children: [],
+      internal: {
+        type: `PinnedRepos`,
+        content: JSON.stringify(repo),
+        contentDigest: createContentDigest(repo),
+      },
+      ...repo,
+    };
+
+    createNode(node);
+  };
+
+  const API_URL =
+    "https://gh-pinned-repos-5l2i19um3.vercel.app/?username=PranjalAgni";
+
+  return new Promise((resolve, reject) => {
+    axios
+      .get(API_URL)
+      .then(res => {
+        res.data.forEach((repo, idx) => {
+          createPinnedRepo(repo, idx);
+          resolve();
+        });
+      })
+      .catch(ex => {
+        console.error(ex);
+        reject(ex);
+      });
   });
 };

@@ -44,14 +44,5 @@ module.exports = {
         path: `${__dirname}/content/json`,
       },
     },
-    // MARKDOWN
-    `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: "case-studies",
-        path: `${__dirname}/content/case-studies`,
-      },
-    },
   ],
 };

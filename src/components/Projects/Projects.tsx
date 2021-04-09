@@ -15,20 +15,19 @@ import { ProjectLinks, ProjectPreview, Tags } from "./ProjectTemplate.style";
 const ProjectsWrapper = styled.section`
   ${props => props.theme.spacing.sectionBottom};
 `;
+
 const Projects = () => {
   const projects = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark {
+        allPinnedRepos {
           edges {
             node {
-              frontmatter {
-                demo
-                excerpt
-                iframe
-                src
-                title
-              }
+              id
+              repo
+              link
+              language
+              description
             }
           }
         }
@@ -40,36 +39,33 @@ const Projects = () => {
     <ProjectsWrapper id="projects" style={{ marginBottom: 100 }}>
       <PageHeader>Side Projects</PageHeader>
 
-      {projects.allMarkdownRemark.edges.map(({ node }: { node: any }) => (
+      {projects.allPinnedRepos.edges.map(({ node }: { node: any }) => (
         <ProjectTemplate
           key={node.id}
-          title={node.frontmatter.title}
-          desc={node.frontmatter.excerpt}
+          title={node.repo}
+          desc={node.description}
           links={
             <ProjectLinks>
-              <Button as={Link} to={"https://github.com/trending"}>
-                Case Study
-              </Button>
-              <Button target="__blank" as="a" href={node.frontmatter.demo}>
+              {/* <Button target="__blank" as="a" href={node.link}>
                 Live Demo
-              </Button>
+              </Button> */}
               <IconButton
                 label="github"
                 icon={["fab", "github"]}
-                href={node.frontmatter.src}
+                href={node.link}
               />
             </ProjectLinks>
           }
           preview={
             <ProjectPreview>
               <IFrame
-                livedemo={!!node.frontmatter.iframe.match("codepen")}
-                src={node.frontmatter.iframe}
+                livedemo={!!node.link.match("codepen")}
+                src={node.link.replace("github", "github1s")}
               />
               <Tags>
                 <FontAwesomeIcon icon={["fab", "js"]} />
-                <FontAwesomeIcon icon={["fab", "html5"]} />
-                <FontAwesomeIcon icon={["fab", "css3"]} />
+                <FontAwesomeIcon icon={["fab", "react"]} />
+                <FontAwesomeIcon icon={["fab", "node"]} />
               </Tags>
             </ProjectPreview>
           }

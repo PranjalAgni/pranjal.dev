@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const AboutWrapper = styled.section`
   margin-bottom: 200px;
@@ -31,7 +31,7 @@ export const AboutInfo = styled.article`
   }
 
   .about__link {
-    color: ${p => (p.theme.dark ? p.theme.primaryColor : '#111')};
+    color: ${p => (p.theme.dark ? p.theme.primaryColor : "#111")};
   }
   @media ${props => props.theme.media.tablet} {
     flex-direction: column;

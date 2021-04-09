@@ -1,6 +1,6 @@
-import useFetch from "@src/hooks/useFetch";
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const QuoteWrapper = styled.article`
   position: relative;
@@ -30,34 +30,25 @@ const QuoteWrapper = styled.article`
     float: right;
   }
 `;
-author: "Epictetus";
-authorSlug: "epictetus";
-content: "Difficulties are things that show a person what they are.";
-length: 57;
-tags: ["famous-quotes"];
 
-type QuoteData = {
-  author: string;
-  authorSlug: string;
+type QuoteProps = {
   content: string;
+  authorSlug: string;
 };
 
-const Quote = () => {
-  const quote = useFetch<QuoteData>({
-    url: "https://api.quotable.io/random?maxLength=90",
-  });
-
+const Quote = ({ content, authorSlug }: QuoteProps) => {
   return (
     <QuoteWrapper>
-      {quote && (
-        <>
-          <p>“{quote.content}“</p>
-          <br />
-          <i>- {quote.authorSlug}</i>
-        </>
-      )}
+      <p>“{content}“</p>
+      <br />
+      <i>- {authorSlug}</i>
     </QuoteWrapper>
   );
+};
+
+Quote.propTypes = {
+  content: PropTypes.string,
+  authorSlug: PropTypes.string,
 };
 
 export default Quote;

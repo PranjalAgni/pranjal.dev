@@ -24,6 +24,7 @@ const useFetch = <T>({ url, init, processData }: RequestProps<T>) => {
         const response = await fetch(url, init);
         if (response.status === 200) {
           const data = await response.json();
+
           const processedData = processJson(data);
           setData(processedData);
         } else {

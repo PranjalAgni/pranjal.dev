@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ContactWrapper = styled.section`
   margin-bottom: 200px;
@@ -59,13 +59,13 @@ export const ContactForm = styled.form`
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    'email name'
-    'textarea textarea'
-    '. button';
+    "email name"
+    "textarea textarea"
+    ". button";
 
   label span {
     font-size: 0.85em;
-    color: ${p => (p.theme.dark ? '#fff' : '#252525')};
+    color: ${p => (p.theme.dark ? "#fff" : "#252525")};
   }
   .label__email {
     grid-area: email;
@@ -84,10 +84,10 @@ export const ContactForm = styled.form`
 
   @media ${props => props.theme.media.tablet} {
     grid-template-areas:
-      'email email'
-      'name name'
-      'textarea textarea'
-      '. button';
+      "email email"
+      "name name"
+      "textarea textarea"
+      ". button";
   }
 
   input,

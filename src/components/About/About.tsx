@@ -1,15 +1,25 @@
-import React, { useEffect } from "react";
-
-import SkewBg from "@common/SkewBg";
-import PageHeader from "@common/PageHeader";
 import Flex from "@common/Flex";
-
-import Quote from "./Quote";
+import PageHeader from "@common/PageHeader";
+import SkewBg from "@common/SkewBg";
+import useFetch from "@src/hooks/useFetch";
+import React from "react";
+import { AboutInfo, AboutWrapper } from "./About.style";
 import Avatar from "./Avatar";
-
-import { AboutWrapper, AboutInfo } from "./About.style";
+import Quote from "./Quote";
 
 const About = () => {
+  type QuoteData = {
+    author: string;
+    authorSlug: string;
+    content: string;
+  };
+
+  const quoteList = useFetch<QuoteData[]>({
+    url:
+      "https://pranjaldev-api-production.up.railway.app/api/quotes/random?limit=3&maxLength=90",
+    processData: data => data?.result?.quotes,
+  });
+
   return (
     <AboutWrapper id="about">
       <PageHeader>About Me</PageHeader>
@@ -34,9 +44,13 @@ const About = () => {
       </AboutInfo>
 
       <Flex justify="space-between" className="quotes__wrapper">
-        <Quote />
-        <Quote />
-        <Quote />
+        {quoteList?.map((quote, idx) => (
+          <Quote
+            key={idx}
+            content={quote.content}
+            authorSlug={quote.authorSlug}
+          />
+        ))}
       </Flex>
     </AboutWrapper>
   );
