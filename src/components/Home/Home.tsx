@@ -18,10 +18,10 @@ const ThingsILove = () => (
       <CardIcon>
         <FontAwesomeIcon icon={"server"} />
       </CardIcon>
-      <CardTitle>FrontEnd</CardTitle>
+      <CardTitle>BackEnd</CardTitle>
       <CardText>
-        I'm more front end focused and love to work with Reactjs as well as pure
-        HTML, CSS.
+        I'm more back end focused and love to work with NodeJS. I like to design
+        scalable systems
       </CardText>
     </Card>
 
@@ -40,10 +40,10 @@ const ThingsILove = () => (
       <CardIcon>
         <FontAwesomeIcon icon={["fab", "node"]} />
       </CardIcon>
-      <CardTitle>Backend Development</CardTitle>
+      <CardTitle>FrontEnd</CardTitle>
       <CardText>
-        I love creative coding because I do both coding & designing. making
-        beautiful art with code is very satisfying to me.
+        ReactJS is my goto library, I love to build state heavy client side apps
+        with the power of JS
       </CardText>
     </Card>
   </Flex>

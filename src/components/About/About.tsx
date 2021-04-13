@@ -15,8 +15,7 @@ const About = () => {
   };
 
   const quoteList = useFetch<QuoteData[]>({
-    url:
-      "https://pranjaldev-api-production.up.railway.app/api/quotes/random?limit=3&maxLength=90",
+    url: `${process.env.API_URL}/quotes/random?limit=3&maxLength=90`,
     processData: data => data?.result?.quotes,
   });
 
@@ -34,12 +33,13 @@ const About = () => {
           <a className="about__link" href="https://www.highradius.com/">
             Highradius
           </a>{" "}
-          as a FullStack engineer. I love to experiment and learn new things. I
-          love backend development, and read about design patterns
+          as a Software Engineer. I extremely love backend development, I can
+          design/write APIs or microservices all day long
           <br />
           <br />
           I'm also into opensource, you can follow me on Github, to get updates
-          on my new projects
+          on my new projects. In my free time I like to watch coding live
+          streams
         </p>
       </AboutInfo>
 
