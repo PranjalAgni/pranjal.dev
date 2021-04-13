@@ -18,7 +18,7 @@ function Contact() {
     event.preventDefault();
 
     await doAPICall({
-      url: `${process.env.API_URL}/contact/submit`,
+      url: `${process.env.GATSBY_API_URL}/contact/submit`,
       init: {
         method: "POST",
         body: JSON.stringify(formData),

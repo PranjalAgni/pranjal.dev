@@ -15,7 +15,7 @@ const About = () => {
   };
 
   const quoteList = useFetch<QuoteData[]>({
-    url: `${process.env.API_URL}/quotes/random?limit=3&maxLength=90`,
+    url: `${process.env.GATSBY_API_URL}/quotes/random?limit=3&maxLength=90`,
     processData: data => data?.result?.quotes,
   });
 
