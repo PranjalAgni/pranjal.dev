@@ -131,9 +131,11 @@ const SmallProjects = () => {
                 <h3>{node.title}</h3>
                 <CardText>{node.description}</CardText>
                 <ProjectLinks className="smallproject__links">
-                  <Button target="__blank" as="a" href={node.links.demo}>
-                    Live Demo
-                  </Button>
+                  {node.links.demo && (
+                    <Button target="__blank" as="a" href={node.links.demo}>
+                      Live Demo
+                    </Button>
+                  )}
                   <IconButton
                     label="github"
                     href={node.links.src}

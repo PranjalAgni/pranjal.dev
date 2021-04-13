@@ -1,42 +1,39 @@
 [
   {
-    "title": "Creative Chat",
+    "title": "Portfolio API",
     "links": {
-      "demo": "https://creativechat.herokuapp.com",
-      "src": "https://github.com/anuraghazra/creativechat"
+      "src": "https://github.com/PranjalAgni/portfolio-api",
+      "demo": "https://pranjaldev-api-being-pranjal.vercel.app/"
     },
-    "description": "Creative Chat is a realtime fun chatting app. where users can draw with colors in the canvas and communicate trough art."
+    "description": "API for my portfolio website, manages quotes and contact form"
   },
   {
-    "title": "Verly.js",
+    "title": "Travel Diary",
     "links": {
-      "demo": "https://anuraghazra.github.io/Verly.js",
-      "src": "https://github.com/anuraghazra/Verly.js"
+      "src": "https://github.com/PranjalAgni/travel-diary"
     },
-    "description": "Verly.js is a successor to my old Verlet.js Physics Engine. Very.js is more simple to use and very modular. Easy to integrate verlet physics engine."
+    "description": "A fullstack map based application, which logs the places I have visited. Currently WIP"
   },
   {
-    "title": "Simple Rockets",
+    "title": "Mail Monkey",
     "links": {
-      "demo": "https://simplerockets.herokuapp.com",
-      "src": "https://github.com/anuraghazra/simplerockets"
+      "demo": "https://sweet-mail.netlify.app/",
+      "src": "https://github.com/PranjalAgni/mail-monkey"
     },
-    "description": "Simple Rockets is an online multiplayer game made with NodeJS and Socket.io. All of the players can join the game with their unique name and play."
+    "description": "A cute little mail based application, powered by Serverless functions"
   },
   {
-    "title": "ParticleBrush",
+    "title": "Slate Share Server",
     "links": {
-      "demo": "https://anuraghazra.github.io/ParticleBrush/",
-      "src": "https://github.com/anuraghazra/ParticleBrush"
+      "src": "https://github.com/PranjalAgni/slate-share-backend"
     },
-    "description": "Amazing Drawing App With Particles. Lots Of Colorful Particles"
+    "description": "Server for mini Google Docs app, uses socket.io for realtime communication and runs inside Docker container"
   },
   {
-    "title": "CanvasFun",
+    "title": "Resource Manager",
     "links": {
-      "demo": "https://anuraghazra.github.io/CanvasFun",
-      "src": "https://github.com/anuraghazra/CanvasFun"
+      "src": "https://github.com/PranjalAgni/resources-manager"
     },
-    "description": "Collection of CreativeCoding projects."
+    "description": "A chrome extension, I wrote to better bookmark my important resources"
   }
 ]
