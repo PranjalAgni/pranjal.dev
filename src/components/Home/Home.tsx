@@ -59,7 +59,7 @@ const Home = () => {
         <div className="home__text">
           <p>Hello, I’m</p>
           <h1>Pranjal Agnihotri</h1>
-          <p className="adjust">Full Stack Web Developer</p>
+          <p className="adjust">Full Stack Software Developer</p>
 
           <div className="home__CTA">
             <Button className="cta" as="a" href="#">

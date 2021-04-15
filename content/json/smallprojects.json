@@ -3,7 +3,7 @@
     "title": "Portfolio API",
     "links": {
       "src": "https://github.com/PranjalAgni/portfolio-api",
-      "demo": "https://pranjaldev-api-being-pranjal.vercel.app/"
+      "demo": "https://pranjal-dev-api.herokuapp.com/"
     },
     "description": "API for my portfolio website, manages quotes and contact form"
   },
