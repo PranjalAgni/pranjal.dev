@@ -3,7 +3,7 @@ const meta = {
   siteDescription: "Pranjal Agnihotri - Loves to build blazing fast softwares",
   siteTitleAlt: "Pranjal Agnihotri",
   siteShortName: "Pranjal Agnihotri",
-  siteUrl: "http://localhost:8000", // No trailing slash!
+  siteUrl: "https://pranjal.me/", // No trailing slash!
 };
 
 const social = {
