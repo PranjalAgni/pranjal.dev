@@ -44,5 +44,14 @@ module.exports = {
         path: `${__dirname}/content/json`,
       },
     },
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: [config.website.trackingId],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ],
 };

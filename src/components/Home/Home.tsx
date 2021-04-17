@@ -20,8 +20,8 @@ const ThingsILove = () => (
       </CardIcon>
       <CardTitle>BackEnd</CardTitle>
       <CardText>
-        I'm more back end focused and love to work with NodeJS. I like to design
-        scalable systems
+        I'm more back end focused and feel most productive with NodeJS. I focus
+        on designing scalable systems
       </CardText>
     </Card>
 

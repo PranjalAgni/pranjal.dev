@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 const meta = {
   siteTitle: "Pranjal Agnihotri - FullStack Developer",
   siteDescription: "Pranjal Agnihotri - Loves to build blazing fast softwares",
@@ -10,6 +14,7 @@ const social = {
   siteLogo: `src/static/logo.svg`,
   twitter: "@PranjalAgnihot8",
   siteBanner: `${meta.siteUrl}/images/social-banner.png`,
+  trackingId: process.env.GOOGLE_ANALYTICS_ID,
 };
 
 module.exports = {
