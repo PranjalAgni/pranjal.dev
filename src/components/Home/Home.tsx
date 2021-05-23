@@ -1,16 +1,17 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import svgRect from "@src/static/home_rect.svg";
-
-import { HeroCard } from "./HeroCard";
-import { HomeWrapper, Intro } from "./Home.style";
-
+import Button from "@common/Button";
+import { Card, CardIcon, CardText, CardTitle } from "@common/Card";
+import Flex from "@common/Flex";
 import IconLink from "@common/IconLink";
 import PageHeader from "@common/PageHeader";
-import Flex from "@common/Flex";
-import Button from "@common/Button";
-
-import { Card, CardIcon, CardText, CardTitle } from "@common/Card";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useFetch from "@src/hooks/useFetch";
+import { doAPICall } from "@src/services/api";
+import svgRect from "@src/static/home_rect.svg";
+import download from "downloadjs";
+import donwload from "downloadjs";
+import React, { SyntheticEvent, useEffect, useState } from "react";
+import { HeroCard } from "./HeroCard";
+import { HomeWrapper, Intro } from "./Home.style";
 
 const ThingsILove = () => (
   <Flex justify="space-between" align="center">
@@ -50,6 +51,19 @@ const ThingsILove = () => (
 );
 
 const Home = () => {
+  const handleDownloadResume = async (event: SyntheticEvent) => {
+    event.preventDefault();
+    const blob = await doAPICall({
+      url: `${process.env.GATSBY_API_URL}/resume/download`,
+      init: {
+        method: "GET",
+      },
+      isFile: true,
+    });
+
+    if (blob) download(blob, "PranjalAgnihotriResume");
+  };
+
   return (
     <HomeWrapper id="home">
       <img className="svg-rect" src={svgRect} alt=""></img>
@@ -62,7 +76,7 @@ const Home = () => {
           <p className="adjust">Full Stack Software Developer</p>
 
           <div className="home__CTA">
-            <Button className="cta" as="a" href="#">
+            <Button className="cta" as="a" onClick={handleDownloadResume}>
               Download Resume
             </Button>
 
