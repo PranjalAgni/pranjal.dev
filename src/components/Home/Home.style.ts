@@ -37,8 +37,21 @@ export const Intro = styled.section`
   p {
     font-family: ${props => props.theme.fontFamily};
   }
+
   .adjust {
     font-size: 1.06rem;
+  }
+
+  .company__text {
+    font-family: "VT323", monospace;
+    display: inline-block;
+    font-size: 2rem;
+  }
+
+  .company__icon {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
   }
 
   .home__CTA {

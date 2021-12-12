@@ -3,13 +3,12 @@ import { Card, CardIcon, CardText, CardTitle } from "@common/Card";
 import Flex from "@common/Flex";
 import IconLink from "@common/IconLink";
 import PageHeader from "@common/PageHeader";
+import Image from "@components/Image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import useFetch from "@src/hooks/useFetch";
 import { doAPICall } from "@src/services/api";
 import svgRect from "@src/static/home_rect.svg";
 import download from "downloadjs";
-import donwload from "downloadjs";
-import React, { SyntheticEvent, useEffect, useState } from "react";
+import React, { SyntheticEvent } from "react";
 import { HeroCard } from "./HeroCard";
 import { HomeWrapper, Intro } from "./Home.style";
 
@@ -73,8 +72,16 @@ const Home = () => {
         <div className="home__text">
           <p>Hello, I’m</p>
           <h1>Pranjal Agnihotri</h1>
-          <p className="adjust">Full Stack Software Developer</p>
-
+          <div>
+            <p className="adjust">
+              {"Full Stack Software Developer@ "}
+              <span className="company__text">{"Microsoft"}</span>
+              <span>{"  "}</span>
+              <span>
+                <Image className="company__icon" src="ms.png" />
+              </span>
+            </p>
+          </div>
           <div className="home__CTA">
             <Button className="cta" as="a" onClick={handleDownloadResume}>
               Download Resume
