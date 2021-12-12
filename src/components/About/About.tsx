@@ -30,8 +30,8 @@ const About = () => {
         <p>
           Hi, I'm Pranjal Agnihotri a life long learner who loves to code and
           build things, currently working at{" "}
-          <a className="about__link" href="https://www.highradius.com/">
-            Highradius
+          <a className="about__link" href="https://www.microsoft.com/en-in/">
+            Microsoft
           </a>{" "}
           as a Software Engineer. I extremely love backend development, I can
           design/write APIs or microservices all day long
