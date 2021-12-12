@@ -24,7 +24,7 @@ const Image = ({ src, ...props }: ImageProps) => {
   `);
 
   const match = data.allImageSharp.edges.find(({ node }: { node: any }) =>
-    node.fluid.originalName.match(src)
+    node?.fluid?.originalName.match(src)
   );
   const isValid = match && match.node.fluid;
 
