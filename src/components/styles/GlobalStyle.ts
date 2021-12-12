@@ -1,8 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 import PrismJsStyles from "./prismjs.style";
 import scrollBar from "./scrollbar.style";
+import "./fonts.css";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`  
   * {
     box-sizing: border-box;
   }
