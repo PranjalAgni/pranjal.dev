@@ -25,7 +25,7 @@ const Projects = () => {
             node {
               id
               repo
-              link
+              url
               language
               description
             }
@@ -63,13 +63,13 @@ const Projects = () => {
           desc={node.description}
           links={
             <ProjectLinks>
-              {/* <Button target="__blank" as="a" href={node.link}>
+              {/* <Button target="__blank" as="a" href={node.url}>
                 Live Demo
               </Button> */}
               <IconButton
                 label="github"
                 icon={["fab", "github"]}
-                href={node.link}
+                href={node.url}
               />
             </ProjectLinks>
           }
@@ -79,8 +79,8 @@ const Projects = () => {
             ) : (
               <ProjectPreview>
                 <IFrame
-                  livedemo={!!node.link.match("codepen")}
-                  src={node.link.replace("github", "github1s")}
+                  livedemo={!!node.url.match("codepen")}
+                  src={node.url.replace("github", "github1s")}
                 />
                 <Tags>
                   <FontAwesomeIcon icon={["fab", "js"]} />
