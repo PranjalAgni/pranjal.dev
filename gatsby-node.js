@@ -37,7 +37,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   };
 
   const API_URL =
-    "https://gh-pinned-worker.pranjal.workers.dev/?username=PranjalAgni";
+    "https://gh-pinned-repos-worker.pranjal.workers.dev/?username=PranjalAgni";
 
   return new Promise((resolve, reject) => {
     axios
